@@ -31,9 +31,7 @@ public class CustomerController {
 
     @CrossOrigin
     @RequestMapping(method = RequestMethod.POST, path = "/customer/signup", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<SignupCustomerResponse> signup(
-            @RequestBody(required = false) final SignupCustomerRequest signupCustomerRequest)
-            throws SignUpRestrictedException
+    public ResponseEntity<SignupCustomerResponse> signup(@RequestBody(required = false) final SignupCustomerRequest signupCustomerRequest) throws SignUpRestrictedException
     {
         // Validation for required fields
         if (
